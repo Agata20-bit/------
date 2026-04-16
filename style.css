@@ -7,7 +7,7 @@
 body {
   font-family: "Arial", sans-serif;
   line-height: 1.6;
-  color: #333;
+  color: #000000;
   background-color: #fff;
   transition:
     background-color 0.3s,
@@ -21,22 +21,52 @@ body {
 }
 
 /* Header */
-.header {
+/* .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px 0;
   border-bottom: 1px solid #eee;
+} */
+
+/* .header__logo {
+  height: 50px;
+  background-color: transparent;
+} */
+
+.header.center {
+  display: flex;
+  justify-content: start; /* Сдвигаем элементы влево */
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  height: 100px;
+  gap: 30px;
+  background: linear-gradient(to bottom, #2b0b9e, #ffffff);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
 }
 
+
 .header__logo {
-  height: 50px;
+  font-size: 3rem; /* Увеличиваем размер шрифта (подберите значение под себя) */
+  font-weight: 700; /* Жирный шрифт для выразительности */
+  color: white; /* Внутренняя часть — белая */
+  text-shadow: 0 0 0 2px black; /* Чёрная окантовка (регулируйте толщину через последнее значение "2px") */
+  letter-spacing: 1px; /* Небольшое расстояние между буквами (опционально) */
+  margin: 0 30px; /* Отступы по бокам (опционально, для баланса) */
 }
+
+
+
 
 .nav {
   display: flex;
   gap: 30px;
+  margin-left: 200px; /* Регулируйте значение под свои нужды */
 }
+
 
 .nav__link {
   text-decoration: none;
@@ -46,9 +76,8 @@ body {
 }
 
 .nav__link:hover {
-  color: #007bff;
+  color: #2b0b9e;
 }
-
 
 /* Mobile navigation */
 .nav-mobile {
@@ -77,10 +106,6 @@ body {
 
 /* Top section */
 .top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 50px 0;
   gap: 40px;
 }
 
@@ -88,22 +113,38 @@ body {
   flex: 1;
 }
 
+
+.top.center {
+  display: flex;
+  justify-content: center; /* Горизонтальный центр */
+  align-items: center; /* Вертикальный центр */
+    max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  height: 500px; /* Высота секции — подстройте под свои нужды */
+}
+
+.top__box {
+  text-align: center; /* Центрируем текст внутри блока */
+}
+
 .top__title {
   font-size: 2.5rem;
   margin-bottom: 20px;
-  color: #2c3e50;
+  color: #2b0b9e;
 }
 
 .top__text {
   font-size: 1.1rem;
-  color: #555;
+  color: #000000;
   line-height: 1.8;
+   text-align: left;
 }
 
 .top__img {
   flex: 0 0 300px;
-  border-radius: 10px;
-  max-width: 100%;
+  height: 500px;
+  border-radius: 110px;
 }
 
 /* About section */
@@ -115,7 +156,7 @@ body {
   font-size: 2rem;
   text-align: center;
   margin-bottom: 30px;
-  color: #2c3e50;
+  color: #2b0b9e;
 }
 
 .about__text {
@@ -123,7 +164,7 @@ body {
   margin: 0 auto 40px;
   text-align: center;
   line-height: 1.8;
-  color: #555;
+  color: #000000;
 }
 
 .about__box {
@@ -164,7 +205,7 @@ body {
   font-size: 2rem;
   text-align: center;
   margin-bottom: 40px;
-  color: #2c3e50;
+  color: #2b0b9e;
 }
 
 .works__box {
@@ -198,7 +239,7 @@ body {
 .work__title {
   font-size: 1.3rem;
   margin-bottom: 10px;
-  color: #2c3e50;
+  color: #000000;
 }
 
 .work__info {
@@ -206,7 +247,7 @@ body {
   gap: 15px;
   margin-bottom: 15px;
   font-size: 0.9rem;
-  color: #666;
+  color: #000000;
 }
 
 .work__tag {
@@ -254,7 +295,7 @@ body {
 .contacts__title {
   font-size: 2rem;
   margin-bottom: 20px;
-  color: #2c3e50;
+  color: #2b0b9e;
 }
 
 .contacts__text {
@@ -317,7 +358,7 @@ body {
 .form__input:focus,
 .form__textarea:focus {
   outline: none;
-  border-color: #007bff;
+  border-color: #2b0b9e;
 }
 
 .form__textarea {
@@ -331,22 +372,22 @@ body {
 
 .form__button {
   padding: 12px 25px;
-  background: #007bff;
+  background: #9e37df;
   color: white;
   border: none;
-  border-radius: 4px;
+  border-radius: 10px;
   cursor: pointer;
   font-size: 1rem;
   transition: background 0.3s;
 }
 
 .form__button:hover {
-  background: #0056b3;
+  background: #806cc9;
 }
 
 /* Footer */
 .footer {
-  background: #2c3e50;
+  background: linear-gradient(to bottom, #ffffff, #2b0b9e);
   color: white;
   text-align: center;
   padding: 20px 0;
@@ -391,7 +432,7 @@ body {
 
 .btn {
   padding: 12px 25px;
-  background: #007bff;
+  background: #993bf0;
   color: white;
   border: none;
   border-radius: 4px;
@@ -414,11 +455,11 @@ body.dark-theme .nav__link {
 }
 
 body.dark-theme .nav__link:hover {
-  color: #66b3ff;
+  color: #2b0b9e;
 }
 
 body.dark-theme .switcher__toggler {
-  background: #555;
+  background: #0a0000;
 }
 
 body.dark-theme .switcher__toggler::before {
@@ -426,18 +467,18 @@ body.dark-theme .switcher__toggler::before {
 }
 
 body.dark-theme .about__skill-box {
-  background: #2d2d2d;
+  background: #080000;
 }
 
 body.dark-theme .work {
-  background: #2d2d2d;
+  background: #000000;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 body.dark-theme .form__input,
 body.dark-theme .form__textarea {
-  background: #333;
-  border-color: #444;
+  background: #0000;
+  border-color: #000000;
   color: #e0e0e0;
 }
 

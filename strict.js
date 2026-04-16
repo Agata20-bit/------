@@ -8,33 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initAnimateOnScroll();
 });
 
-// Переключение темы
-function initThemeSwitcher() {
-  const switcher = document.getElementById('switcher');
-  if (!switcher) return;
 
-  const body = document.body;
-  const toggler = switcher.querySelector('.switcher__toggler');
-
-  // Проверяем сохранённую тему
-  const savedTheme = localStorage.getItem('theme');
-  if (savedTheme === 'dark') {
-    body.classList.add('dark-theme');
-    toggler.style.transform = 'translateX(20px)';
-  }
-
-  switcher.addEventListener('click', () => {
-    body.classList.toggle('dark-theme');
-
-    if (body.classList.contains('dark-theme')) {
-      toggler.style.transform = 'translateX(20px)';
-      localStorage.setItem('theme', 'dark');
-    } else {
-      toggler.style.transform = 'translateX(0)';
-      localStorage.removeItem('theme');
-    }
-  });
-}
 
 // Мобильное меню
 function initMobileMenu() {
